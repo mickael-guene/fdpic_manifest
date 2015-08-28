@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com" name="github"/>
+
+  <default revision="master" remote="github"/>
+
+  <project name="mickael-guene/binutils" path="scratch/binutils" revision="binutils-2.22-fdpic-m"/>
+  <project name="mickael-guene/gcc" path="scratch/gcc" revision="gcc-linaro-4.7-2013.05-cec-fdpic-m"/>
+  <project name="mickael-guene/gmp" path="scratch/gmp" revision="gmp-5.0.5"/>
+  <project name="mickael-guene/mpc" path="scratch/mpc" revision="mpc-0.9"/>
+  <project name="mickael-guene/mpfr" path="scratch/mpfr" revision="mpfr-3.0.1"/>
+  <project name="mickael-guene/doc" path="scratch/doc" revision="master"/>
+  <project name="mickael-guene/kernel" path="scratch/kernel" revision="master"/>
+  <project name="mickael-guene/uclibc" path="scratch/uclibc" revision="uClibc-0.9.33.2-fdpic-m"/>
+  <project name="mickael-guene/gdb" path="scratch/gdb" revision="gdb-7.5.1-fdpic-m"/>
+
+</manifest>
