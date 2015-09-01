@@ -11,7 +11,7 @@
 
 First install following packages
 ```
-~/fdpic $ apt-get install build-essential texinfo flex bison libncurses5-dev curl git python pkg-config zlib1g-dev
+~/fdpic $ apt-get install build-essential texinfo flex bison libncurses5-dev curl git python wget autoconf libtool pkg-config zlib1g-dev libglib2.0-dev
 ```
 Then install repo if you don't have it in your path
 ```
