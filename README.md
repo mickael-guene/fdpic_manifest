@@ -11,7 +11,7 @@
 
 First install following packages
 ```
-~/fdpic $ apt-get install build-essential texinfo flex bison libncurses5-dev curl git python
+~/fdpic $ apt-get install build-essential texinfo flex bison libncurses5-dev curl git python pkg-config zlib1g-dev
 ```
 Then install repo if you don't have it in your path
 ```
@@ -27,8 +27,7 @@ Then install repo if you don't have it in your path
 ```
 * build
 ```
-~/fdpic $ ./scratch/build/install.sh
-~/fdpic $ ./src/scripts/build.sh
+~/fdpic $ ./scratch/build/scripts/build.sh
 ```
 
  At the end the process you will find a tarball in out directory that contains the compile toolset.
