@@ -14,6 +14,7 @@
   <project name="mickael-guene/uclibc" path="scratch/uclibc" revision="uClibc-0.9.33.2-fdpic-m"/>
   <project name="mickael-guene/gdb" path="scratch/gdb" revision="gdb-7.5.1-fdpic-m"/>
   <project name="mickael-guene/fdpic_build" path="scratch/build" revision="master"/>
-  <project name="mickael-guene//fdpic_variant" path="scratch/variant" revision="fdpic-v7-m"/>
+  <project name="mickael-guene/fdpic_variant" path="scratch/variant" revision="fdpic-v7-m"/>
+  <project name="mickael-guene/qemu" path="scratch/qemu" revision="qemu-2.3.0-fdpic"/>
 
 </manifest>
