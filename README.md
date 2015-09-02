@@ -3,6 +3,11 @@
  of shared libraries support on mmu-less platforms. Using shared libraries allow to reduce
  memory requirement of the system. Indeed code segments are only load once in memory and then
  share accross process in the system.
+ 
+ Prebuild [packages](https://github.com/mickael-guene/fdpic_manifest/releases) can be found for
+ ubuntu 14.04. One package contains the fdpic toolset and will allow you to build arm fdpic binaries.
+ The other one is usefull to run arm fdpic binaries on your host machine, it contains proot,
+ qemu-arm binaries and a basic fdpic rootfs.
 
 ## How to build
  Following installation instructions have been tested on an ubuntu 14.04 docker image (docker pull ubuntu:14.04).
@@ -25,12 +30,18 @@ Then install repo if you don't have it in your path
 ~/fdpic $ repo init -u https://github.com/mickael-guene/fdpic_manifest -b fdpic-v7-m
 ~/fdpic $ repo sync
 ```
-* build
+* build toolchain package
 ```
 ~/fdpic $ ./scratch/build/scripts/build.sh
 ```
 
- At the end the process you will find a tarball in out directory that contains the compile toolset.
+* build runtime package
+```
+~/fdpic $ ./scratch/build/scripts/build_runtime.sh
+```
+
+ At the end the process you will find two tarballs in out directory. One that contains toolset and the
+ other one that contains proot, qemu-arm and a basic rootfs.
 
  If you want to build cortex-r toolset then replace fdpic-v7-m by fdpic-v7-r in the repo init phase.
 
@@ -42,12 +53,18 @@ Then install repo if you don't have it in your path
 For that just untar in a directory the tarball you have generated during compilation.
 ```
 ~/fdpic $ mkdir install_test
-~/fdpic $ tar -C install_test -xf out/toolset-8b4eab1e-armv7-r.tgz
+~/fdpic $ tar -C install_test -xf out/toolset-20150901-161939-d0b51e9f-armv7-m.tgz
 ```
 * setup path and test your toolset is alive.
 ```
 ~/fdpic $ export PATH=~/fdpic/install_test/bin:${PATH}
 ~/fdpic $ arm-v7-linux-uclibceabi-gcc -v
+```
+
+* install runtime if you need it and test you can run an fdpic binary
+```
+~/fdpic $ tar -C install_test -xf out/runtime-20150901-161939-d0b51e9f-armv7-m.tgz
+~/fdpic $ ./install_test/proot -R install_test/rootfs -q install_test/qemu-arm ./install_test/rootfs/bin/gdbserver
 ```
 
 ## Limitations of the toolset
