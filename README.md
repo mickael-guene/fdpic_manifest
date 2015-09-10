@@ -1,5 +1,5 @@
 # ARM FDPIC toolset
- ARm FDPIC toolset implements the so-called ARM FDPIC ABI. This toolset allows to use
+ ARM FDPIC toolset implements the so-called ARM FDPIC ABI. This toolset allows to use
  shared libraries on MMU-less platforms. Using shared libraries allows to reduce
  memory requirement on the system. Indeed code segments are only loaded once in memory and then
  shared across processes in the system.
