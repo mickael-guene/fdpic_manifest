@@ -1,16 +1,16 @@
-# Arm fdpic toolset
- Arm fdpic toolset implement the so-called arm fdpic abi. This toolset allow to enable the use
- of shared libraries support on mmu-less platforms. Using shared libraries allow to reduce
- memory requirement of the system. Indeed code segments are only load once in memory and then
- share accross process in the system.
+# ARM FDPIC toolset
+ ARm FDPIC toolset implements the so-called ARM FDPIC ABI. This toolset allows to use
+ shared libraries on MMU-less platforms. Using shared libraries allows to reduce
+ memory requirement on the system. Indeed code segments are only loaded once in memory and then
+ shared across processes in the system.
  
- Prebuild [packages](https://github.com/mickael-guene/fdpic_manifest/releases) can be found for
- ubuntu 14.04. One package contains the fdpic toolset and will allow you to build arm fdpic binaries.
- The other one is usefull to run arm fdpic binaries on your host machine, it contains proot,
- qemu-arm binaries and a basic fdpic rootfs.
+ Prebuilt [packages](https://github.com/mickael-guene/fdpic_manifest/releases) can be found for
+ Ubuntu 14.04. One package contains the FDPIC toolset and will allow you to build ARM FDPIC binaries.
+ The other one is usefull to run ARM FDPIC binaries on your host machine, it contains proot,
+ qemu-arm binaries and a basic FDPIC rootfs.
 
 ## How to build
- Following installation instructions have been tested on an ubuntu 14.04 docker image (docker pull ubuntu:14.04).
+ Following installation instructions have been tested on an Ubuntu 14.04 docker image (docker pull ubuntu:14.04).
 
 * install prerequites
 
@@ -40,12 +40,12 @@ Then install repo if you don't have it in your path
 ~/fdpic $ ./scratch/build/scripts/build_runtime.sh
 ```
 
- At the end the process you will find two tarballs in out directory. One that contains toolset and the
+ At the end of the process you will find two tarballs in the out directory. One that contains toolset and the
  other one that contains proot, qemu-arm and a basic rootfs.
 
  If you want to build cortex-r toolset then replace fdpic-v7-m by fdpic-v7-r in the repo init phase.
 
- To speed up your build you can setup JOBNB environment variable to the value you want to use $JOBNB parallel jobs.
+ To speed up your build you can set JOBNB environment variable to the value you want to use $JOBNB parallel jobs.
 
 ## How to install it
 * install toolset
@@ -61,17 +61,17 @@ For that just untar in a directory the tarball you have generated during compila
 ~/fdpic $ arm-v7-linux-uclibceabi-gcc -v
 ```
 
-* install runtime if you need it and test you can run an fdpic binary
+* install runtime if you need it and check you can run an FDPIC binary
 ```
 ~/fdpic $ tar -C install_test -xf out/runtime-20150901-161939-d0b51e9f-armv7-m.tgz
 ~/fdpic $ ./install_test/proot -R install_test/rootfs -q install_test/qemu-arm ./install_test/rootfs/bin/gdbserver
 ```
 
 ## Limitations of the toolset
-Main limitations of the toolset are due to the lack of mmu and are mainly :
+Main limitations of the toolset are due to the lack of MMU and are mainly :
 * no fork support. Instead use vfork.
 * memory limitations (mprotect, ....).
-* stack has a static size define at link time.
+* stack has a static size defined at link time.
 
-Other know limitations not due to the lack of mmu are :
-* lazy binding is not supported. All the plt entries are resolved at load time.
+Other known limitations not due to the lack of MMU are :
+* lazy binding is not supported. All the PLT entries are resolved at load time.
