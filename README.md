@@ -1,18 +1,18 @@
 # ARM FDPIC toolset
- ARM FDPIC toolset implements the so-called ARM FDPIC ABI. This toolset allows to use
- shared libraries on MMU-less platforms. Using shared libraries allows to reduce
+ ARM FDPIC toolset implements the so-called [ARM FDPIC ABI](https://github.com/mickael-guene/fdpic_doc/blob/master/abi.txt).
+ This toolset allows to use shared libraries on MMU-less platforms. Using shared libraries allows to reduce
  memory requirement on the system. Indeed code segments are only loaded once in memory and then
  shared across processes in the system.
  
  Prebuilt [packages](https://github.com/mickael-guene/fdpic_manifest/releases) can be found for
  Ubuntu 14.04. One package contains the FDPIC toolset and will allow you to build ARM FDPIC binaries.
- The other one is usefull to run ARM FDPIC binaries on your host machine, it contains proot,
+ The other one is useful to run ARM FDPIC binaries on your host machine, it contains PRoot,
  qemu-arm binaries and a basic FDPIC rootfs.
 
 ## How to build
  Following installation instructions have been tested on an Ubuntu 14.04 docker image (docker pull ubuntu:14.04).
 
-* install prerequites
+* install prerequisites
 
 First install following packages
 ```
@@ -40,8 +40,8 @@ Then install repo if you don't have it in your path
 ~/fdpic $ ./scratch/build/scripts/build_runtime.sh
 ```
 
- At the end of the process you will find two tarballs in the out directory. One that contains toolset and the
- other one that contains proot, qemu-arm and a basic rootfs.
+ At the end of the process you will find two tarballs in the newly created 'out' directory. One that contains
+ the toolset and the other one that contains PRoot, qemu-arm and a basic rootfs.
 
  If you want to build cortex-r toolset then replace fdpic-v7-m by fdpic-v7-r in the repo init phase.
 
