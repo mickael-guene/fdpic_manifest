@@ -4,16 +4,16 @@
   
   <default remote="github" revision="master"/>
   
-  <project name="mickael-guene/binutils" path="scratch/binutils" revision="f9ebb8f50ab8dd74290aead9c98bcac0a97c906f" upstream="binutils-2.22-fdpic"/>
+  <project name="mickael-guene/binutils" path="scratch/binutils" revision="6f2c381426e18cb9a4a39e24ca49b2a03022b12c" upstream="binutils-2.22-fdpic"/>
   <project name="mickael-guene/fdpic_build" path="scratch/build" revision="c3cee39159db5abb7e6082531979bddbc8169762" upstream="master"/>
-  <project name="mickael-guene/fdpic_doc" path="scratch/doc" revision="090a917c6bba19b95b632c0f8d266601f9c4311d" upstream="master"/>
+  <project name="mickael-guene/fdpic_doc" path="scratch/doc" revision="1c55b42fc6afa22b9d1dc5e93adfb83241eca8b9" upstream="master"/>
   <project name="mickael-guene/fdpic_variant" path="scratch/variant" revision="18d1911a9b38e5ef9f99008c86d1050c68f1baba" upstream="fdpic-v7-r"/>
   <project name="mickael-guene/gcc" path="scratch/gcc" revision="b0dbe7667be2f675244bf191848605bbdb24c34b" upstream="gcc-linaro-4.7-2013.05-cec-fdpic"/>
-  <project name="mickael-guene/gdb" path="scratch/gdb" revision="5f74b2d3709ca62f261baee3ebb3d8014ec40554" upstream="gdb-7.5.1-fdpic"/>
+  <project name="mickael-guene/gdb" path="scratch/gdb" revision="1b490c942cecb91fbca29fbc265a38a4d58fe3a1" upstream="gdb-7.5.1-fdpic"/>
   <project name="mickael-guene/gmp" path="scratch/gmp" revision="f43e284071261868b7b0dab219af585c6fbc7fed" upstream="gmp-5.0.5"/>
   <project name="mickael-guene/kernel" path="scratch/kernel" revision="292a4f5c5b4c65fb47f51201adf279937a7a31e1" upstream="master"/>
   <project name="mickael-guene/mpc" path="scratch/mpc" revision="374a247e54d7463b35d40e90caf8f91e871b16af" upstream="mpc-0.9"/>
   <project name="mickael-guene/mpfr" path="scratch/mpfr" revision="2bf824318c7f5e0f30281fe093ea5d385ec4a5fd" upstream="mpfr-3.0.1"/>
-  <project name="mickael-guene/qemu" path="scratch/qemu" revision="22691e10abc4c8e0bde567abf37099ba321c949b" upstream="qemu-2.3.0-fdpic"/>
+  <project name="mickael-guene/qemu" path="scratch/qemu" revision="dc28258b29ab5925fe671a330d210eb84ac1cbfa" upstream="qemu-2.3.0-fdpic"/>
   <project name="mickael-guene/uclibc" path="scratch/uclibc" revision="6d6eb00d1590f1d9795c54595690e6c6c9e33dba" upstream="uClibc-0.9.33.2-fdpic"/>
 </manifest>
