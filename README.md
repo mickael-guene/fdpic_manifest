@@ -78,6 +78,7 @@ Other known limitations not due to the lack of MMU are :
 
 ## Kernel FDPIC support
 To be able to load and execute FDPIC binaries you need following kernel patches :
+- [Add support to new fdpic abi binaries loading](https://github.com/mickael-guene/kernel/commit/267158143576542c59bbef6e97aa10fb04b72294)
 - [Add support for fdpic binaries loading](https://github.com/mickael-guene/kernel/commit/1b8c98252261980dc79cf0090341d74d8753b891)
 - [add support to return to thumb2 code from signal for fdpic binaries](https://github.com/mickael-guene/kernel/commit/10e6b818854e3e85934751f6580a0588c58d3bcd)
 - [Add get_tls syscall](https://github.com/mickael-guene/kernel/commit/e76d4547c033764677d83aef44df23b5ae1e3d03)
