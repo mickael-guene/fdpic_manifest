@@ -15,5 +15,5 @@
   <project name="mickael-guene/mpc" path="scratch/mpc" revision="374a247e54d7463b35d40e90caf8f91e871b16af" upstream="mpc-0.9"/>
   <project name="mickael-guene/mpfr" path="scratch/mpfr" revision="2bf824318c7f5e0f30281fe093ea5d385ec4a5fd" upstream="mpfr-3.0.1"/>
   <project name="mickael-guene/qemu" path="scratch/qemu" revision="dc28258b29ab5925fe671a330d210eb84ac1cbfa" upstream="qemu-2.3.0-fdpic"/>
-  <project name="mickael-guene/uclibc" path="scratch/uclibc" revision="02567fde5fdaa82bf38dbfe13248a441e5efc158" upstream="uClibc-0.9.33.2-fdpic-m"/>
+  <project name="mickael-guene/uclibc" path="scratch/uclibc" revision="d8fbfea37ee621918f1b15322bed213fda8fbe3e" upstream="uClibc-0.9.33.2-fdpic-m"/>
 </manifest>
